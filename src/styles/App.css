@@ -1,0 +1,500 @@
+.app {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.top-nav {
+  width: 100%;
+  height: 62px;
+  padding: 0 42px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.top-nav h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.nav-search {
+  width: 350px;
+  height: 36px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+}
+
+.nav-search input {
+  flex: 1;
+  border: none;
+  padding: 0 14px;
+  outline: none;
+  font-size: 14px;
+}
+
+.nav-search button {
+  width: 42px;
+  border: none;
+  background: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-icons {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+}
+
+.nav-icons button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 29px;
+  cursor: pointer;
+}
+
+.hero {
+  height: 620px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.25),
+    rgba(255, 255, 255, 0.2),
+    #ffffff
+  );
+}
+
+.hero-text {
+  position: absolute;
+  left: 90px;
+  bottom: 90px;
+  color: white;
+  max-width: 520px;
+}
+
+.hero-text span {
+  font-weight: 800;
+}
+
+.hero-text h2 {
+  margin: 10px 0;
+  font-size: 46px;
+}
+
+.hero-text p {
+  font-size: 17px;
+}
+
+.hero-text button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background: white;
+  color: #111;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.hero-arrow.left {
+  left: 18px;
+}
+
+.hero-arrow.right {
+  right: 18px;
+}
+
+.home-content,
+.page-content {
+  width: 1180px;
+  margin: 60px auto 140px;
+}
+
+.page-content {
+  padding-top: 90px;
+}
+
+.section-row {
+  margin-bottom: 64px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.section-title h2 {
+  width: 210px;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.section-title div {
+  flex: 1;
+  height: 1px;
+  background: #777;
+}
+
+.card-row {
+  display: flex;
+  gap: 48px;
+  overflow-x: auto;
+  padding: 0 0 16px;
+}
+
+.card-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-row::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 999px;
+}
+
+.tour-card {
+  min-width: 255px;
+}
+
+.tour-card img {
+  width: 255px;
+  height: 245px;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #cfcfcf;
+  cursor: pointer;
+}
+
+.card-info {
+  padding: 12px 2px;
+}
+
+.card-info strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+  height: 34px;
+  overflow: hidden;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.card-actions button:hover {
+  background: #111;
+  color: white;
+}
+
+.empty-text {
+  color: #777;
+  padding: 20px 0;
+}
+
+.detail-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-box {
+  width: 780px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 18px;
+  position: relative;
+}
+
+.detail-box img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.detail-content {
+  padding: 30px;
+}
+
+.detail-content h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.detail-addr {
+  font-weight: 700;
+  color: #555;
+}
+
+.overview {
+  line-height: 1.7;
+}
+
+.detail-content a {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 18px;
+  background: #111;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.side-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.side-menu {
+  width: 360px;
+  height: 100%;
+  margin-left: auto;
+  background: white;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.side-close {
+  float: right;
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.side-menu h2 {
+  margin-top: 0;
+}
+
+.menu-group {
+  margin-top: 38px;
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+}
+
+.menu-group h3 {
+  margin: 0 0 18px;
+}
+
+.menu-group button {
+  display: block;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu-group button:hover {
+  font-weight: 800;
+}
+
+.message,
+.error {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.error {
+  color: crimson;
+}
+.hero-dots {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.5);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+.hero-dots {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 11px;
+  z-index: 5;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 255px);
+  gap: 48px;
+  justify-content: flex-start;
+}
+
+.page-content .section-row {
+  margin-bottom: 80px;
+}
+
+.page-content .tour-card {
+  min-width: 255px;
+}
+
+.footer {
+  position: relative;
+  min-height: 230px;
+  background: #050505;
+  color: #777;
+  padding: 55px 70px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  border-top: 1px solid #222;
+}
+
+.footer-left p {
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+
+.footer-right {
+  margin-top: 25px;
+  font-weight: 800;
+}
+
+.top-button {
+  position: absolute;
+  right: 70px;
+  bottom: 60px;
+  width: 58px;
+  height: 58px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  color: black;
+  font-size: 28px;
+  cursor: pointer;
+}
+.filter-panel {
+  margin-bottom: 50px;
+  padding: 34px 38px;
+  background: #f6f6f6;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-panel h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.filter-panel p {
+  margin: 0;
+  color: #666;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-controls select {
+  width: 180px;
+  height: 44px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 15px;
+  background: white;
+}
