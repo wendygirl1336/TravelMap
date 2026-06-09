@@ -12,6 +12,7 @@ function SideMenu({
 }) {
   if (!open) return null;
 
+  /* 사이드 메뉴 출력 */
   return (
     <div className="side-bg" onClick={onClose}>
       <aside className="side-menu" onClick={(e) => e.stopPropagation()}>

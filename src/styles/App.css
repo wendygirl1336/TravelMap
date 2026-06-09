@@ -1,8 +1,19 @@
+/* =========================================================
+   TravelMap 전체 스타일
+   Navbar
+   Hero
+   Card
+   Detail Modal
+   Side Menu
+   Footer
+========================================================= */
+
 .app {
   min-height: 100vh;
   background: #fff;
 }
 
+/* Navbar */
 .top-nav {
   width: 100%;
   height: 62px;
@@ -64,6 +75,7 @@
   cursor: pointer;
 }
 
+/* Hero Section */
 .hero {
   height: 620px;
   position: relative;
@@ -429,6 +441,7 @@
   min-width: 255px;
 }
 
+/* Footer */
 .footer {
   position: relative;
   min-height: 230px;

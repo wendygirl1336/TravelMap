@@ -16,6 +16,10 @@ const commonParams =
   `&MobileApp=TravelMap` +
   `&_type=json`;
 
+  /* =========================================================
+   API 응답 데이터 공통 처리
+   JSON 데이터에서 item 배열 추출
+========================================================= */
 const getItems = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
@@ -43,6 +47,9 @@ export const getTourList = async (
   rows = 50,
   pageNo = 1
 ) => {
+  /* =========================================================
+   모든 API 요청에 공통으로 사용되는 파라미터
+========================================================= */
   const url =
     `${BASE_URL}/areaBasedList2?${commonParams}` +
     `&numOfRows=${rows}` +

@@ -36,6 +36,7 @@ function TourDetail({ tour, onClose }) {
               : "상세 설명이 없습니다."}
           </p>
 
+
           {mapUrl && (
             <a href={mapUrl} target="_blank" rel="noreferrer">
               카카오맵으로 보기

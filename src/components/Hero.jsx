@@ -32,10 +32,12 @@ function Hero({ tours, onDetail }) {
   const slideData = tours.length > 0 ? tours : defaultImages;
   const currentTour = slideData[current];
 
+  // 다음 슬라이드 이동
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slideData.length);
   };
 
+  // 이전 슬라이드 이동
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slideData.length - 1 : prev - 1));
   };
