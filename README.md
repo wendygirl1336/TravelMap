@@ -1,16 +1,211 @@
-# React + Vite
+# ✈️ TravelMap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+한국관광공사 Open API를 활용한 국내 여행 정보 제공 웹 서비스입니다.
 
-Currently, two official plugins are available:
+사용자는 관광지 검색, 지역별 조회, 카테고리별 조회, 내 주변 관광지 조회, 관심 관광지 저장 등의 기능을 이용할 수 있습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 프로젝트 소개
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+TravelMap은 전국 관광지, 축제, 숙소, 맛집 등의 여행 정보를 한 곳에서 확인할 수 있는 웹 애플리케이션입니다.
 
-## Expanding the ESLint configuration
+한국관광공사 관광정보 API를 활용하여 실시간 관광 데이터를 제공하며, 사용자가 쉽고 편리하게 여행 계획을 세울 수 있도록 개발하였습니다.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 개발 환경
+
+### Front-End
+
+* React
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+### API
+
+* 한국관광공사 관광정보 Open API
+
+### 개발 도구
+
+* Visual Studio Code
+* GitHub
+
+---
+
+## ✨ 주요 기능
+
+### 1. 관광지 검색
+
+* 키워드를 이용한 관광지 검색
+* 검색 결과 출력
+
+### 2. 카테고리별 조회
+
+* 관광지
+* 문화시설
+* 축제/공연/행사
+* 레포츠
+* 숙박
+* 쇼핑
+* 음식점
+
+카테고리별 관광 정보를 확인할 수 있습니다.
+
+### 3. 지역별 조회
+
+* 서울
+* 인천
+* 부산
+* 경기
+* 강원
+* 충북
+* 충남
+* 경북
+* 경남
+* 전북
+* 전남
+* 제주
+
+지역별 관광지를 조회할 수 있습니다.
+
+### 4. 위치 기반 추천
+
+* 현재 위치를 기반으로 주변 관광지를 추천합니다.
+
+### 5. 관심 관광지
+
+* 관심 있는 관광지를 저장할 수 있습니다.
+* LocalStorage를 이용하여 브라우저에 저장됩니다.
+
+### 6. 최근 검색어
+
+* 최근 검색어를 저장하고 재검색할 수 있습니다.
+
+### 7. 최근 본 관광지
+
+* 사용자가 확인한 관광지를 저장합니다.
+
+### 8. 관광지 상세 정보
+
+* 관광지명
+* 주소
+* 이미지
+* 개요
+* 상세 정보
+
+확인 가능합니다.
+
+---
+
+## 📂 프로젝트 구조
+
+```text
+src
+ ┣ api
+ ┃ ┗ tourismApi.js
+ ┣ components
+ ┃ ┣ Navbar.jsx
+ ┃ ┣ Hero.jsx
+ ┃ ┣ SectionRow.jsx
+ ┃ ┣ TourCard.jsx
+ ┃ ┣ TourDetail.jsx
+ ┃ ┣ SideMenu.jsx
+ ┃ ┣ Loading.jsx
+ ┃ ┗ ErrorMessage.jsx
+ ┣ styles
+ ┃ ┣ App.css
+ ┃ ┗ index.css
+ ┣ App.jsx
+ ┗ main.jsx
+```
+
+---
+
+## 🔄 데이터 흐름
+
+```text
+사용자
+   ↓
+TravelMap
+   ↓
+React Front-End
+   ↓
+한국관광공사 Open API
+   ↓
+관광 정보 데이터 수신
+   ↓
+화면 출력
+```
+
+---
+
+## 📷 화면 구성
+
+### 메인 페이지
+
+* 네비게이션 바
+* 메인 슬라이드 배너
+* 내 주변 추천 여행지
+* 관심 관광지
+* 최근 본 관광지
+* 인기 관광지
+* 지역별 관광지
+* 축제 정보
+* 숙소 정보
+* 맛집 정보
+
+### 카테고리 페이지
+
+* 지역 필터
+* 카테고리 필터
+* 관광지 목록 출력
+
+### 검색 페이지
+
+* 검색 결과 출력
+
+### 상세 정보 페이지
+
+* 관광지 상세 정보 출력
+
+---
+
+## 🚀 실행 방법
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 📖 사용 API
+
+한국관광공사 관광정보 서비스
+
+* 지역기반 관광정보 조회
+* 키워드 검색 조회
+* 위치기반 관광정보 조회
+* 관광지 상세정보 조회
+
+---
+
+## 🎯 기대 효과
+
+* 관광 정보 통합 제공
+* 사용자 맞춤형 관광지 추천
+* 여행 계획 수립 편의성 향상
+* 공공데이터 활용 경험 습득
+* React 기반 웹 개발 능력 향상
+
+---
+
+## 👨‍💻 개발자
+
+이효정
+동양미래대학교 컴퓨터소프트웨어공학과
+
+웹프론트엔드실습 기말 프로젝트
