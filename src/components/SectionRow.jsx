@@ -1,3 +1,8 @@
+/**
+ * 관광지 목록 출력 컴포넌트
+ * 홈 : 가로 스크롤
+ * 카테고리 : Grid 출력
+ */
 import TourCard from "./TourCard";
 
 function SectionRow({

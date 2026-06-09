@@ -1,3 +1,7 @@
+/**
+ * 관광지 카드
+ * 이미지, 제목, 주소 출력
+ */
 function TourCard({ tour, onDetail, onFavorite, isFavorite }) {
   return (
     <div className="tour-card">

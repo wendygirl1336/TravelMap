@@ -1,3 +1,7 @@
+/**
+ * 사이드 메뉴
+ * 카테고리 및 최근 검색어 제공
+ */
 function SideMenu({
   open,
   onClose,

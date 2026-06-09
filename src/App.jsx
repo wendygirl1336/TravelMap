@@ -1,3 +1,23 @@
+/**
+ * =========================================================
+ * TravelMap
+ * 한국관광공사 Open API를 활용한 여행 정보 플랫폼
+ *
+ * 주요 기능
+ * 1. 관광지 검색
+ * 2. 카테고리 조회
+ * 3. 지역별 조회
+ * 4. 위치 기반 관광지 추천
+ * 5. 관심 관광지 저장
+ * 6. 최근 검색어 저장
+ * 7. 최근 본 관광지 저장
+ * 8. 관광지 상세 정보 조회
+ *
+ * 개발 환경
+ * React + Vite
+ * =========================================================
+ */
+
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -14,13 +34,20 @@ import {
 } from "./api/tourismApi";
 
 function App() {
+  // 현재 페이지
   const [page, setPage] = useState("home");
+  // 검색어
   const [keyword, setKeyword] = useState("");
 
+  // 메인 슬라이드 관광지
   const [heroTours, setHeroTours] = useState([]);
+  // 내 주변 관광지
   const [nearbyTours, setNearbyTours] = useState([]);
+  // 관심 관광지
   const [favorites, setFavorites] = useState([]);
+  // 최근 검색어
   const [recentSearches, setRecentSearches] = useState([]);
+  // 최근 본 관광지
   const [recentViewed, setRecentViewed] = useState([]);
 
   const [sections, setSections] = useState({});
@@ -73,6 +100,9 @@ function App() {
     return areas.find((area) => area.code === areaCode)?.name || "전체 지역";
   };
 
+  /* =========================================================
+   홈 화면 데이터 로드
+========================================================= */
   const loadHome = async () => {
     try {
       setLoading(true);
@@ -167,7 +197,9 @@ function App() {
       setLoading(false);
     }
   };
-
+/* =========================================================
+   카테고리 페이지 데이터 로드
+========================================================= */
   const loadCategoryPage = async (
     areaCode = selectedArea,
     typeCode = selectedType
@@ -212,6 +244,7 @@ function App() {
     }
   };
 
+  
   const handleCategory = async (typeId, title) => {
     setSelectedType(typeId);
     setSelectedArea("all");
@@ -219,6 +252,9 @@ function App() {
     await loadCategoryPage("all", typeId);
   };
 
+/* =========================================================
+   검색 기능
+========================================================= */
   const handleSearch = async (word = keyword) => {
     if (word.trim() === "") return;
 
@@ -245,6 +281,9 @@ function App() {
     }
   };
 
+/* =========================================================
+   현재 위치 관광지 조회
+========================================================= */
   const handleNearby = () => {
     if (!navigator.geolocation) {
       setError("현재 위치 기능을 사용할 수 없습니다.");
@@ -276,7 +315,9 @@ function App() {
       }
     );
   };
-
+/* =========================================================
+   관광지 상세 정보 조회
+========================================================= */
   const handleDetail = async (tour) => {
     try {
       setLoading(true);
@@ -301,6 +342,9 @@ function App() {
     }
   };
 
+  /* =========================================================
+   관심 관광지 추가 / 삭제
+========================================================= */
   const toggleFavorite = (tour) => {
     const exists = favorites.some((item) => item.contentid === tour.contentid);
 
@@ -318,6 +362,10 @@ function App() {
     localStorage.setItem("favorites", JSON.stringify(newFavorites));
   };
 
+  /* =========================================================
+   최초 실행
+   LocalStorage 및 홈 데이터 로드
+========================================================= */
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
     const savedRecent = JSON.parse(localStorage.getItem("recentSearches")) || [];

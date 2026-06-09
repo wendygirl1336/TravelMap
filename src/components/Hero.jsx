@@ -1,3 +1,8 @@
+/**
+ * Hero Component
+ * 메인 슬라이드 배너
+ * 추천 관광지 표시
+ */
 import { useState } from "react";
 
 function Hero({ tours, onDetail }) {

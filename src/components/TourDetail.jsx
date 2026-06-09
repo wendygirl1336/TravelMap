@@ -1,3 +1,7 @@
+/**
+ * 관광지 상세 정보 모달
+ * 이미지, 설명, 주소, 지도 링크 출력
+ */
 function TourDetail({ tour, onClose }) {
   const mapUrl =
     tour.mapx && tour.mapy

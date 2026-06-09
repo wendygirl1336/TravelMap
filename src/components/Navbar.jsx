@@ -1,3 +1,7 @@
+/**
+ * Navbar Component
+ * 검색 및 메뉴 이동
+ */
 function Navbar({
   keyword,
   setKeyword,
