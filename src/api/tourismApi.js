@@ -5,7 +5,7 @@
  */
 
 const API_KEY =
-  "726c30e17cf5b70715df9fb693e580a82dd5e51a611f8c1ee7250316248197c0";
+  "ce2c63d01d0c3c319049a74dbf5019beda9d02708c00112e758384d0d7b09b1a";
 
 const BASE_URL = "https://apis.data.go.kr/B551011/KorService2";
 
